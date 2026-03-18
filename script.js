@@ -11,7 +11,7 @@ let modules = [
     },
     {
         "id": 2,
-        "name": "魔法人偶",
+        "name": "哈哈魔法人偶",
         "image": "images/魔法人偶.jpg",
         "link": "https://www.anyposes.com/",
         "guide": "#",
@@ -193,13 +193,8 @@ function editModule(moduleId) {
 
 // 初始化页面
 function init() {
-    // 加载模块数据，使用script.js中的默认数据
-    // 然后尝试从localStorage中加载额外的模块
-    const localStorageModules = JSON.parse(localStorage.getItem('modules'));
-    if (localStorageModules && localStorageModules.length > modules.length) {
-        // 如果localStorage中有更多的模块，使用localStorage中的数据
-        modules = localStorageModules;
-    }
+    // 加载模块数据，只使用script.js中的默认数据
+    // 忽略localStorage中的数据，确保优先使用script.js中的数据
     renderModules();
     setupEventListeners();
 }
