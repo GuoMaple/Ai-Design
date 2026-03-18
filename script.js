@@ -1,5 +1,6 @@
 // 模块数据存储
-let modules = JSON.parse(localStorage.getItem('modules')) || [
+// 优先使用默认数据，而不是localStorage中的数据
+let modules = [
     {
         "id": 1,
         "name": "Img Upscaler",
@@ -192,23 +193,13 @@ function editModule(moduleId) {
 
 // 初始化页面
 function init() {
-    // 加载模块数据，优先使用本地存储的数据
-    modules = JSON.parse(localStorage.getItem('modules')) || [
-        {
-            id: 1,
-            name: '模块1',
-            image: 'images/模块1.jpg',
-            link: '#',
-            guide: '#'
-        },
-        {
-            id: 2,
-            name: '模块2',
-            image: 'images/模块2.jpg',
-            link: '#',
-            guide: '#'
-        }
-    ];
+    // 加载模块数据，使用script.js中的默认数据
+    // 然后尝试从localStorage中加载额外的模块
+    const localStorageModules = JSON.parse(localStorage.getItem('modules'));
+    if (localStorageModules && localStorageModules.length > modules.length) {
+        // 如果localStorage中有更多的模块，使用localStorage中的数据
+        modules = localStorageModules;
+    }
     renderModules();
     setupEventListeners();
 }
