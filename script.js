@@ -96,6 +96,27 @@ function saveModules() {
     localStorage.setItem('modules', JSON.stringify(modules));
 }
 
+// 显示使用说明
+function showGuide(moduleName, guideUrl) {
+    const guideModal = document.getElementById('guide-modal');
+    const guideTitle = document.getElementById('guide-title');
+    const guideContent = document.getElementById('guide-content');
+    
+    if (guideModal && guideTitle && guideContent) {
+        guideTitle.textContent = `${moduleName} - 使用说明`;
+        
+        if (guideUrl && guideUrl !== '#') {
+            // 直接尝试加载文件，不进行存在性检查（本地文件系统中XMLHttpRequest可能不可靠）
+            guideContent.innerHTML = `<iframe src="${guideUrl}" onload="this.style.display='block'" onerror="this.parentElement.textContent='待补充，请稍后查看'" style="display:none;"></iframe>`;
+        } else {
+            // 如果没有使用说明链接，显示提示信息
+            guideContent.textContent = '待补充，请稍后查看';
+        }
+        
+        guideModal.style.display = 'block';
+    }
+}
+
 // 编辑模式状态
 let isEditMode = false;
 
@@ -417,27 +438,6 @@ function addModule() {
     // 重置表单数据属性和按钮文本
     delete addModuleModal.dataset.moduleId;
     document.getElementById('add-module-submit').textContent = '完成';
-}
-
-// 显示使用说明
-function showGuide(moduleName, guideUrl) {
-    const guideModal = document.getElementById('guide-modal');
-    const guideTitle = document.getElementById('guide-title');
-    const guideContent = document.getElementById('guide-content');
-    
-    if (guideModal && guideTitle && guideContent) {
-        guideTitle.textContent = `${moduleName} - 使用说明`;
-        
-        if (guideUrl && guideUrl !== '#') {
-            // 直接尝试加载文件，不进行存在性检查（本地文件系统中XMLHttpRequest可能不可靠）
-            guideContent.innerHTML = `<iframe src="${guideUrl}" onload="this.style.display='block'" onerror="this.parentElement.textContent='待补充，请稍后查看'" style="display:none;"></iframe>`;
-        } else {
-            // 如果没有使用说明链接，显示提示信息
-            guideContent.textContent = '待补充，请稍后查看';
-        }
-        
-        guideModal.style.display = 'block';
-    }
 }
 
 // 全局函数，用于显示访问密码弹窗
