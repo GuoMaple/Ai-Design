@@ -1,6 +1,6 @@
 // 模块数据存储
 // 优先使用默认数据，而不是localStorage中的数据
-let modules = [
+let modules = JSON.parse(localStorage.getItem('modules')) || [
     {
         "id": 1,
         "name": "Img Upscaler",
@@ -48,6 +48,46 @@ let modules = [
         "image": "images/多角度生成.jpg",
         "link": "https://www.liblib.art/modelinfo/236a739d12ab4b4783201e55369d8413?from=search&versionUuid=9b2dd06aefd44ae9bc6309a07625cf57",
         "guide": "https://www.liblib.art/modelinfo/236a739d12ab4b4783201e55369d8413?from=search&versionUuid=9b2dd06aefd44ae9bc6309a07625cf57"
+    },
+    {
+        "id": 1773806351383,
+        "name": "玻璃柜烟雾机械手",
+        "description": "上传白底自动生成类似效果",
+        "image": "images/玻璃柜烟雾机械手.jpg",
+        "link": "https://www.liblib.art/modelinfo/538acb0d9659465e88b645934a912912?versionUuid=fdc1d9f7a8764092acf5c1edf8d5d6e3",
+        "guide": "https://www.liblib.art/modelinfo/538acb0d9659465e88b645934a912912?versionUuid=fdc1d9f7a8764092acf5c1edf8d5d6e3"
+    },
+    {
+        "id": 1773806373427,
+        "name": "冲水效果",
+        "description": "上传白底生成类似效果",
+        "image": "images/冲水效果.jpg",
+        "link": "https://www.liblib.art/modelinfo/2af8b8560e7e4c60acfa186999fe6966?from=feed&versionUuid=b394bab1a40a41dfa5cc2caeeb7d3053&rankExpId=RVIyX0wyI0VHMTEjRTE3X0wzI0VHMjUjRTM4",
+        "guide": "https://www.liblib.art/modelinfo/2af8b8560e7e4c60acfa186999fe6966?from=feed&versionUuid=b394bab1a40a41dfa5cc2caeeb7d3053&rankExpId=RVIyX0wyI0VHMTEjRTE3X0wzI0VHMjUjRTM4"
+    },
+    {
+        "id": 1773806424001,
+        "name": "内部结构特效",
+        "description": "自动生成透明内部结构",
+        "image": "images/内部结构特效.jpg",
+        "link": "https://www.liblib.art/modelinfo/502fbac3644842d7838d69851f51a149?from=feed&versionUuid=40be741705d1420fa13385e9dbf0751e&rankExpId=RVIyX0wyI0VHMTEjRTE3X0wzI0VHMjUjRTM4",
+        "guide": "https://www.liblib.art/modelinfo/502fbac3644842d7838d69851f51a149?from=feed&versionUuid=40be741705d1420fa13385e9dbf0751e&rankExpId=RVIyX0wyI0VHMTEjRTE3X0wzI0VHMjUjRTM4"
+    },
+    {
+        "id": 1773806468148,
+        "name": "逆向PSD",
+        "description": "图片自动拆分带图层源文件",
+        "image": "images/逆向PSD.jpg",
+        "link": "https://huggingface.co/spaces/Qwen/Qwen-Image-Layered",
+        "guide": "https://huggingface.co/spaces/Qwen/Qwen-Image-Layered"
+    },
+    {
+        "id": 1773812038392,
+        "name": "烟雾照明效果",
+        "description": "白底图生成类似效果",
+        "image": "images/烟雾照明效果.jpg",
+        "link": "https://www.liblib.art/modelinfo/c1b07e74f98d430584acac7d4618f21a?from=feed&versionUuid=315d6a352ca542a194ec6116a0a18f21&rankExpId=RVIyX0wyI0VHMTEjRTE3X0wzI0VHMjUjRTM4",
+        "guide": "https://www.liblib.art/modelinfo/c1b07e74f98d430584acac7d4618f21a?from=feed&versionUuid=315d6a352ca542a194ec6116a0a18f21&rankExpId=RVIyX0wyI0VHMTEjRTE3X0wzI0VHMjUjRTM4"
     }
 ];
 
