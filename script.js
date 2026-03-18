@@ -1,20 +1,52 @@
 // 模块数据存储
 let modules = JSON.parse(localStorage.getItem('modules')) || [
     {
-        id: 1,
-        name: '模块1',
-        description: '这是模块1的描述',
-        image: 'images/模块1.jpg',
-        link: '#',
-        guide: '#'
+        "id": 1,
+        "name": "Img Upscaler",
+        "image": "images/Img Upscaler.jpg",
+        "link": "https://imgupscaler.ai/zh/",
+        "guide": "#",
+        "description": "无需登入-免费放大"
     },
     {
-        id: 2,
-        name: '模块2',
-        description: '这是模块2的描述',
-        image: 'images/模块2.jpg',
-        link: '#',
-        guide: '#'
+        "id": 2,
+        "name": "魔法人偶",
+        "image": "images/魔法人偶.jpg",
+        "link": "https://www.anyposes.com/",
+        "guide": "#",
+        "description": "摆放动作用于Ai生图参考"
+    },
+    {
+        "id": 1773802895710,
+        "name": "Krea",
+        "description": "Ai重绘放大",
+        "image": "images/Krea.jpg",
+        "link": "https://www.krea.ai/enhancer",
+        "guide": "https://www.krea.ai/enhancer"
+    },
+    {
+        "id": 1773803119578,
+        "name": "动作迁移",
+        "description": "根据参考做出相同的动作",
+        "image": "images/动作迁移.jpg",
+        "link": "https://huggingface.co/spaces/linoyts/Qwen-Image-Edit-2511-AnyPose",
+        "guide": "1"
+    },
+    {
+        "id": 1773803156434,
+        "name": "光影迁移",
+        "description": "复刻图片的光影效果",
+        "image": "images/光影迁移.jpg",
+        "link": "https://huggingface.co/spaces/multimodalart/Qwen-Image-Light-Migration",
+        "guide": "https://huggingface.co/spaces/multimodalart/Qwen-Image-Light-Migration"
+    },
+    {
+        "id": 1773803172005,
+        "name": "多角度生成",
+        "description": "图片生成其它9个角度",
+        "image": "images/多角度生成.jpg",
+        "link": "https://www.liblib.art/modelinfo/236a739d12ab4b4783201e55369d8413?from=search&versionUuid=9b2dd06aefd44ae9bc6309a07625cf57",
+        "guide": "https://www.liblib.art/modelinfo/236a739d12ab4b4783201e55369d8413?from=search&versionUuid=9b2dd06aefd44ae9bc6309a07625cf57"
     }
 ];
 
